@@ -24,9 +24,9 @@ Pour effectuer cette manipulation, le montage ci-dessous a été utilisé:
 Il est constitué d'une barre métallique attachée en son centre à un dynamomètre électronique captant la force dans l'axe de la barre sus-mentionée.
 Cette barre est percée en plusieurs endroits afin d'y placer des masses cylindriques trouées en leur centre afin de les glisser le long de l'axe puis de les visser afin de les immobiliser.
 Une masse de contre-poids est placée à l'extremité opposée afin de ne pas appliquer trop de force sur l'axe lorsque des masses trop imposantes sont placées en bout de barre.
-Une barrière infrarouge est placé le long de la cage afin d'indiquer lorsque la barre en rotation coupe de faisceau dans le but de donner la vitesse angulaire $\omega$.
+Une barrière infrarouge est placé le long de la cage afin d'indiquer lorsque la barre en rotation coupe le faisceau dans le but de donner la vitesse angulaire $\omega$.
 
-Pour effectuer les mesures, Cassy a été utilisé, c'est un logiciel accompagné d'un boîtier de mesure sur lequel le dynamomètre ainsi que la barrière infrarouge ont été branchés.
+Pour effectuer les mesures, Cassy a été utilisé. C'est un logiciel accompagné d'un boîtier de mesure sur lequel le dynamomètre ainsi que la barrière infrarouge ont été branchés.
 Ce boîtier est ensuite relié à un ordinateur sur lequel on a pu interagir avec les capteurs pour extraire leurs mesures
 
 Pour chaque mesure le procédé suivant a été appliqué.
@@ -64,26 +64,12 @@ Pour l'analyse des données, la consignes de procéder en trois parties a été 
     \item Finalement on donne le rapport entre la force (toujours) et la vitesse angulaire au carré.
 \end{itemize}
 
+\newpage
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Force en fonction du rayon}
 
 La vitesse angulaire constante choisie est de 25 rad/s car c’est là que les mesures sont les plus élevées.
-
-\begin{figure}[!h]
-    \caption[Graphique rayon force]{Graphique de rapport entre le rayon et la force}
-    \centering
-    \includegraphics[height=22em]{graf1.png}
-\end{figure}
-
-Les courbes ont été forcées de passer par zéro afin de respecter la théorie et de faciliter les calculs d'incertitudes.
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{l l l l}
-    m = 100g & p = 61,731 & $R^2$ = 0,9991 & $\Delta p$=1.069\\
-    m = 75g  & p = 47,818 & $R^2$ = 0,9983 & $\Delta p$=1.139\\
-    m = 50g  & p = 30,735 & $R^2$ = 0,9999 & $\Delta p$=0.177\\
-    \end{tabular}
-\end{table}
 
 \begin{table}[ht]
     \centering
@@ -129,27 +115,64 @@ Les courbes ont été forcées de passer par zéro afin de respecter la théorie
     \end{tabular}
 \end{table}
 
+\begin{figure}[!h]
+    \caption[Graphique rayon force]{Graphique de rapport entre le rayon et la force}
+    \centering
+    \includegraphics[height=20em]{graf1.png}
+\end{figure}
+
+Les courbes ont été forcées de passer par zéro afin de respecter la théorie et de faciliter les calculs d'incertitudes.
+
+Pour chacune des courbes, les incertitudes ont éte calculées grâce à la formule~\eqref{deltam}, donnant ainsi les résultats suivants.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l l l l}
+    m = 100g & p = 61,731 & $R^2$ = 0,9991 & $\Delta p$=1.069\\
+    m = 75g  & p = 47,818 & $R^2$ = 0,9983 & $\Delta p$=1.139\\
+    m = 50g  & p = 30,735 & $R^2$ = 0,9999 & $\Delta p$=0.177\\
+    \end{tabular}
+\end{table}
+
+Pour la version théorique,l'équation~\eqref{force} a été utilisée, donc en utilisant dans ce cas:
+
+\begin{equation}
+    p' = \omega^2 \cdot m
+\end{equation}
+
+Comme les mesures de $\omega$ ne sont pas exactememt les mêmes dans chaque cas, on a d'abord calculé pour chacune de ces valeurs avant de faire la moyenne. Ce qui donne:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l l}
+	m = 0.052kg & p' = 32.3962\\
+	m = 0.077kg & p' = 48.2796\\
+	m = 0.102kg & p' = 63.8522\\
+    \end{tabular}
+\end{table}
+
+Pour calculer les incertitudes dans ce cas, la méthode des dérivées partielle a été sollicitée. Les valeurs ont été moyennées de manière analogue à celles ci-dessus.
+
+\begin{equation}
+    \Delta p' = |\frac{\delta p'}{\delta \omega^2}|\cdot \Delta \omega^2 + |\frac{\delta p'}{\delta m}|\cdot \Delta m
+\end{equation}
+
+Les valeurs théoriques avec incertitudes sont donc:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l l}
+	m = 0.052kg & $p' \pm \Delta p'$ = 32.3962 $\pm$ 0.2658 \\
+	m = 0.077kg & $p' \pm \Delta p'$ = 48.2796 $\pm$ 0.3919 \\
+	m = 0.102kg & $p' \pm \Delta p'$ = 63.8522 $\pm$ 0.5167 \\
+    \end{tabular}
+\end{table}
+
 \paragraph{Conclusion}
 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Force en fonction de la masse}
-
-\begin{figure}[!h]
-    \caption[Graphique masse force]{Graphique de rapport entre la masse et la force}
-    \centering
-    \includegraphics[height=22em]{graf2.png}
-\end{figure}
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{l l l l}
-    r = 0.25m & p = 151,08& $R^2$ = 0,9933 & $\Delta p$=12.41\\
-    r = 0.15m & p = 91,351& $R^2$ = 0,9968 & $\Delta p$=5.176\\
-    r = 0.05m & p = 30,401& $R^2$ = 0,9963 & $\Delta p$=1.853\\
-    \end{tabular}
-\end{table}
-
 
 \begin{table}[ht]
     \centering
@@ -186,6 +209,55 @@ Les courbes ont été forcées de passer par zéro afin de respecter la théorie
 	25	&11,99	&0,077 \\
 	25	&15,23	&0,102 \\
     \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[!h]
+    \caption[Graphique masse force]{Graphique de rapport entre la masse et la force}
+    \centering
+    \includegraphics[height=22em]{graf2.png}
+\end{figure}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l l l l}
+    r = 0.25m & p = 151,08& $R^2$ = 0,9933 & $\Delta p$=12.41\\
+    r = 0.15m & p = 91,351& $R^2$ = 0,9968 & $\Delta p$=5.176\\
+    r = 0.05m & p = 30,401& $R^2$ = 0,9963 & $\Delta p$=1.853\\
+    \end{tabular}
+\end{table}
+
+Dans le but de calculer les valeurs théoriques, l'équation~\eqref{force} a encore été utilisée:
+
+\begin{equation}
+    p' = \omega^2 \cdot r
+\end{equation}
+
+Comme dans le cas précédent, il y a de legéres différences entre les valeurs de $\omega^2$, une moyenne a de nouveau été faite aussi bien pour les valeurs de $p'$ que pour celles de $\Delta p'$.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l l}
+	r = 0.25m & p' = 31.3335 \\
+	r = 0.15m & p' = 94.0005 \\
+	r = 0.05m & p' = 155.834 \\
+    \end{tabular}
+\end{table}
+
+Le procédé pour le calcul des incertitudes est exactement le même que pour le cas où le rayon variait.
+
+\begin{equation}
+    \Delta p' = |\frac{\delta p'}{\delta \omega^2}|\cdot \Delta \omega^2 + |\frac{\delta p'}{\delta r}|\cdot \Delta r
+\end{equation}
+
+Finalement:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l l}
+	r = 0.25m & $p' \pm \Delta p'$ = 31.3335 $\pm$ 0.2503 \\
+	r = 0.15m & $p' \pm \Delta p'$ = 94.0005 $\pm$ 0.7510 \\
+	r = 0.05m & $p' \pm \Delta p'$ = 155.834 $\pm$ 1.2483 \\
     \end{tabular}
 \end{table}
 
