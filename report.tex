@@ -11,7 +11,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[pdftex]{graphicx}
-%\usepackage{subfig}
+\usepackage{subfig}
 
 \usepackage[protrusion=true,expansion=true]{microtype}
 
@@ -104,7 +104,6 @@ pdfcreator=pdflatex]{hyperref}
 %\newcommand{\kmeans}{{\em k}-means\xspace}
 %\newcommand{\kmeanspp}{{\em k}-means$++$\xspace}
 %\newcommand{\captionwidth}{0.9\textwidth}
-
 % index stuff
 \usepackage{tocbibind} % Index in TOC
 %\usepackage{makeidx}
@@ -135,6 +134,8 @@ pdfcreator=pdflatex]{hyperref}
 % LaTeX magic: make sections and parts have a cleardoublepage
 %\let\stdsection\section
 %\renewcommand*\section{\cleardoublepage\stdsection}
+
+\captionsetup{belowskip=12pt,aboveskip=4pt}
 
 \begin{document}
 % JP
@@ -239,9 +240,9 @@ pdfcreator=pdflatex]{hyperref}
 \include{theorie}
 \newpage
 
-\section{Manipulations}
-\addcontentsline{toc}{section}{Théorie}
-\markboth{Théorie}{}
+\section{Manipulation}
+\addcontentsline{toc}{section}{Manipulation}
+\markboth{Manipulation}{}
 \include{manipulation}
 \newpage
 

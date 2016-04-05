@@ -10,3 +10,58 @@ Comme $\omega=\frac{v}{r}$, on peut aussi noter:
     F=m\cdot\frac{v^2}{r}
 \end{equation}
 Sans cette force, la masse serait libérée de son mouvement et continuerait son parcours de manière rectiligne.
+
+\subsection{Incertitudes}
+
+Une mesure expérimentale est toujours accompagnée de son $\textit{incertitude de mesure}$. On peut qualifier cette incertitude selon différentes caractéristiques:
+\begin{itemize}
+\item La résolution
+\item La précision
+\item Le reproductibilité
+\end{itemize}
+
+Cette incertitude a de multiples sources, humaines ou liées au matériel, qui la rendent inévitable mais pas pour autant non-quantifiable.
+On la calcule en générale de deux manières, sous forme $\textit{d'incertitude absolue}$ ou $\textit{d'incertitude relative}$.
+
+\paragraph{Notation}
+Un résultat s'écrit donc sous la forme: \[a\pm\Delta a\] tel que $\Delta a$ soit l'incertitude absolue et $\frac{\Delta a}{a} \%$ soit l'incertitude relative.
+
+\paragraph{Chiffres significatifs}
+Pour noter correctement les résultats avec leur incertitude, il faut être attentif aux $\textit{chiffres significatifs}$, les mesures et résultats de calculs doivent être exprimés avec un ou x chiffres dont la valeur n'est pas certaine.\\
+Par exemple, pour une mesure au gramme près $m = (2.3\pm0.1)kg$.
+
+\paragraph{Propagation des erreurs}
+Une fois l'incertitude estimée, il faut encore la propager aux tous les calculs qui suivront. Dans le cas d'une fonction à une seule variable, on peut utiliser sa différentielle:
+\begin{equation}
+    dg=|{\frac{df}{dx}}|dx
+\end{equation}
+
+Ce qui donne pratiquement:
+\begin{equation}
+    \Delta g=|\frac{df}{dx}|\Delta x
+\end{equation}
+
+Pour propager les erreurs durant les calculs, les formules suivantes sont utilisées:\\
+Addition/Soustraction:
+\begin{equation}
+    \begin{split}
+	g = a \pm b\\
+	\Delta g = \Delta a + \Delta b
+    \end{split}
+\end{equation}
+Multiplication/Division:
+\begin{equation}
+    \begin{split}
+	g = k\cdot ab \;\;\; k=constante\\
+	\frac{\Delta}{|g|} = \frac{\Delta}{|a|} + \frac{\Delta}{|b|}
+    \end{split}
+\end{equation}
+
+\subsection{Régression linéaire}
+
+Pour la regression linéaire, les formules suivantes peuvent être utilisées afin de calculer les incertitudes liées la courbe générée.
+\begin{equation}
+    \Delta m=m\sqrt{\frac{\frac{1}{r^2}-1}{n-2}} \;\;;\;\;
+    r=\frac{\sum_{k=1}^{n}(x_k-\bar{x})\cdot(y_k-\bar{y})}{\sqrt{\sum_{k=1}^{n}(x_k-\bar{x})^2\cdot\sum_{k=1}^{n}(y_k-\bar{y})^2}} \;\;;\;\;
+    \Delta h=\Delta m \sqrt{\frac{\sum_{k=1}^{n}x_k^2}{n}}
+\end{equation}
