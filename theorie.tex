@@ -2,6 +2,7 @@
 Ce type de mouvement est caractéristique des masses contraintes à faire une rotation le long d'un cercle en général de rayon constant.
 La contrainte est modélisée par la force centripète qui pour un rayon fixe vaut:
 \begin{equation}
+    \label{force}
     F=m\cdot \omega^2 \cdot r
 \end{equation}
 Ou $\omega$ représente la vitesse angulaire en $[rad/s]$, $m$ la masse en $[kg]$, et $r$ le rayon de rotation en $[m]$.
@@ -51,9 +52,10 @@ Addition/Soustraction:
 \end{equation}
 Multiplication/Division:
 \begin{equation}
+    \label{multdiv}
     \begin{split}
 	g = k\cdot ab \;\;\; k=constante\\
-	\frac{\Delta}{|g|} = \frac{\Delta}{|a|} + \frac{\Delta}{|b|}
+	\frac{\Delta g}{|g|} = \frac{\Delta a}{|a|} + \frac{\Delta b}{|b|}
     \end{split}
 \end{equation}
 

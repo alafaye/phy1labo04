@@ -43,7 +43,7 @@ Dans l'objectif d'avoir des mesures les plus précises possibles les masses et l
     \centering
     \begin{tabular}{|l|l|}
 	\hline
-	Masse théorique [g] & Masse réelle [g]\\
+	Masse théorique [kg] & Masse réelle [kg]\\
 	\hline
 	0.050 & $0.0517 \pm 0.01$\\
 	0.075 & $0.0767 \pm 0.01$\\
@@ -64,6 +64,7 @@ Pour l'analyse des données, la consignes de procéder en trois parties a été 
     \item Finalement on donne le rapport entre la force (toujours) et la vitesse angulaire au carré.
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Force en fonction du rayon}
 
 La vitesse angulaire constante choisie est de 25 rad/s car c’est là que les mesures sont les plus élevées.
@@ -71,7 +72,7 @@ La vitesse angulaire constante choisie est de 25 rad/s car c’est là que les m
 \begin{figure}[!h]
     \caption[Graphique rayon force]{Graphique de rapport entre le rayon et la force}
     \centering
-    \includegraphics[height=25em]{graf1.png}
+    \includegraphics[height=22em]{graf1.png}
 \end{figure}
 
 Les courbes ont été forcées de passer par zéro afin de respecter la théorie et de faciliter les calculs d'incertitudes.
@@ -131,12 +132,13 @@ Les courbes ont été forcées de passer par zéro afin de respecter la théorie
 \paragraph{Conclusion}
 
 \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Force en fonction de la masse}
 
 \begin{figure}[!h]
     \caption[Graphique masse force]{Graphique de rapport entre la masse et la force}
     \centering
-    \includegraphics[height=25em]{graf2.png}
+    \includegraphics[height=22em]{graf2.png}
 \end{figure}
 
 \begin{table}[ht]
@@ -190,18 +192,11 @@ Les courbes ont été forcées de passer par zéro afin de respecter la théorie
 \paragraph{Conclusion}
 
 \newpage
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Force en fonction du carré de la vitesse angulaire}
 
-Pour cette partie, les rayons ont été choisis les plus différents possibles afin d'augmenter la dispersion des résultats.
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{l l l l}
-    r = 0.25m & p = 0,0241 & $R^2$ = 0,9989& $\Delta p$=0.0006\\
-    r = 0.15m & p = 0,0151 & $R^2$ = 0,9962& $\Delta p$=0.0007\\
-    r = 0.05m & p = 0,0051 & $R^2$ = 0,9974& $\Delta p$=0.0002\\
-    \end{tabular}
-\end{table}
+Pour cette partie, les rayons ont été choisis les plus différents possibles afin d'augmenter la dispersion des résultats  que voici.
 
 \begin{table}[ht]
     \caption[Tables mesures vitesse angulaire force]{Tables des mesures choisies pour observer le rapport entre F et $\omega^2$}
@@ -247,16 +242,67 @@ Pour cette partie, les rayons ont été choisis les plus différents possibles a
 \begin{figure}[!h]
     \caption[Graphique $\omega^2$ force]{Graphique de rapport entre la vitesse angulaire au carré et la force}
     \centering
-    \includegraphics[height=25em]{graf3.png}
+    \includegraphics[height=22em]{graf3.png}
 \end{figure}
 
-Pour les incertitudes, l'équation~\eqref{deltam} a été utilisée.
+Pour les incertitudes, l'équation~\eqref{deltam} a été utilisée.\\
 A.N.:
 \begin{equation}
-	Hello
+    0.0241\sqrt{\frac{\frac{1}{0.9989^2}-1}{n-2}}=0.0006
 \end{equation}
+
+On procède de la même manière pour les autres valeurs et l'on obtient:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l l l l}
+    r = 0.25m & p = 0,0241 & $R^2$ = 0,9989& $\Delta p$=0.0006\\
+    r = 0.15m & p = 0,0151 & $R^2$ = 0,9962& $\Delta p$=0.0007\\
+    r = 0.05m & p = 0,0051 & $R^2$ = 0,9974& $\Delta p$=0.0002\\
+    \end{tabular}
+\end{table}
+
+Pour le calcul avec la formule théorique~\eqref{force} on obtient:
+
+\begin{equation}
+    p' = m \cdot r
+\end{equation}
+
+A.N.:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l l}
+	r = 0.05m & p' = 0.0051\\
+	r = 0.15m & p' = 0.0153\\
+	r = 0.25m & p' = 0.0255\\
+    \end{tabular}
+\end{table}
+
+Pour les incertitudes il faut utiliser~\eqref{multdiv}, ce qui nous permet d'obtenir:
+
+\begin{equation}
+    \Delta p' = p' \cdot (\frac{\Delta m}{m} + \frac{\Delta r}{r})
+\end{equation}
+
+La barre de métal étant finement ouvragée, on suppose $\Delta r$ négligeable, donc:
+
+\begin{equation}
+    \Delta p' = p' \cdot \frac{\Delta m}{m}
+\end{equation}
+
+Les valeurs finales sont donc:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l l}
+	r = 0.05m & $p'\pm \Delta p'$ = 0.0051 $\pm$ 0.0001\\
+	r = 0.15m & $p'\pm \Delta p'$ = 0.0153 $\pm$ 0.0002\\
+	r = 0.25m & $p'\pm \Delta p'$ = 0.0255 $\pm$ 0.0003\\
+    \end{tabular}
+\end{table}
 
 \paragraph{Conclusion}
 
 On peut donc raisonnablement affirmer que la force est linéairement proportionelle au carré de la vitesse angulaire.
-Les droites extrapolées ne convergent pas toutes exactement vers l'origine, mais cette possiblité est incluse dans le calcul d'incertitudes.
+Les mesures effectuées correspondent très bien à la théorie et les incertitudes sont donc très réduites.
