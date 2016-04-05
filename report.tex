@@ -222,41 +222,36 @@ pdfcreator=pdflatex]{hyperref}
 
 \newpage
 
-\begingroup
-\renewcommand{\cleardoublepage}{}
-\renewcommand{\clearpage}{}
-
-\section*{Introduction}
-\addcontentsline{toc}{section}{Introduction}
+\section{Introduction}
+%\addcontentsline{toc}{section}{Introduction}
 \markboth{Introduction}{}
-\include{intro}
+\input{intro}
 \newpage
 
 \pagenumbering{arabic}
 
 \section{Théorie}
-\addcontentsline{toc}{section}{Théorie}
+%\addcontentsline{toc}{section}{Théorie}
 \markboth{Théorie}{}
-\include{theorie}
+\input{theorie}
 \newpage
 
 \section{Manipulation}
-\addcontentsline{toc}{section}{Manipulation}
+%\addcontentsline{toc}{section}{Manipulation}
 \markboth{Manipulation}{}
-\include{manipulation}
+\input{manipulation}
 \newpage
 
 \section{Conclusion}
-\addcontentsline{toc}{section}{Conclusion}
+%\addcontentsline{toc}{section}{Conclusion}
 \markboth{Conclusion}{}
-\include{concl}
+\input{concl}
 \newpage
 
 \section{Annexe}
-\addcontentsline{toc}{section}{Annexe}
+%\addcontentsline{toc}{section}{Annexe}
 \markboth{Annexe}{}
-\include{annexe}
+\input{annexe}
 
-\endgroup
 
 \end{document}
