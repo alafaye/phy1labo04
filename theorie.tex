@@ -60,8 +60,15 @@ Multiplication/Division:
 \subsection{Régression linéaire}
 
 Pour la regression linéaire, les formules suivantes peuvent être utilisées afin de calculer les incertitudes liées la courbe générée.
+Dans ces équations, n représente le nombre de mesures et p la pente.
+
 \begin{equation}
-    \Delta m=m\sqrt{\frac{\frac{1}{r^2}-1}{n-2}} \;\;;\;\;
-    r=\frac{\sum_{k=1}^{n}(x_k-\bar{x})\cdot(y_k-\bar{y})}{\sqrt{\sum_{k=1}^{n}(x_k-\bar{x})^2\cdot\sum_{k=1}^{n}(y_k-\bar{y})^2}} \;\;;\;\;
-    \Delta h=\Delta m \sqrt{\frac{\sum_{k=1}^{n}x_k^2}{n}}
+    \label{regressionr}
+    r=\frac{\sum_{k=1}^{n}(x_k-\bar{x})\cdot(y_k-\bar{y})}{\sqrt{\sum_{k=1}^{n}(x_k-\bar{x})^2\cdot\sum_{k=1}^{n}(y_k-\bar{y})^2}}
+\end{equation}
+\\
+
+\begin{equation}
+    \label{deltam}
+    \Delta p=p\sqrt{\frac{\frac{1}{r^2}-1}{n-2}}
 \end{equation}
